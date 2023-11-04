@@ -1,9 +1,10 @@
 <script lang="ts">
+    import { FlickModel } from "~/models/flicks";
     import { FlickService } from "~/services/flickService";
 
     export let flickId;
     
-    let flick = FlickService.getInstance().getFlickById(flickId);
+    let flick = FlickService.getInstance().getFlickById(flickId) as FlickModel;
 </script>
 
 <page>
